@@ -47,7 +47,8 @@ const initializeRouter = require('./initialize'); // Import the initialize route
 const cors = require('cors');
 const app = express();
 app.use(cors());
-const port = 3000; // Choose your desired port
+// const port = 3000; // Choose your desired port
+const port = process.env.PORT || 3000; // Use the PORT environment variable or default to 3000
 
 // Us the initialize router
 app.use('/', initializeRouter);
